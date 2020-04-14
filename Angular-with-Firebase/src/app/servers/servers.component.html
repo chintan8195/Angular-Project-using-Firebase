@@ -19,3 +19,9 @@
 </ng-template>  -->
 <app-server *ngFor="let server of servers"></app-server>
 
+<button class="btn btn-primary" (click)="(onDisplay())">Display Details</button>
+<p *ngIf="shouldDisplay"> This will display something: </p>
+<p 
+*ngFor="let count of buttonCounter: let i= index"
+[ngStyle]="{backgroundColor:count>4 ? 'blue':'white'}"
+[ngClass]="{buttonLength:count>4}">{{count}}</p>
